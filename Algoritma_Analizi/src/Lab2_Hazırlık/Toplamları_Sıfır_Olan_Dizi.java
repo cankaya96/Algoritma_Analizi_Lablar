@@ -13,7 +13,7 @@ public class Toplamları_Sıfır_Olan_Dizi {
     public static void main(String[] args) {
         int SayaçSıralama=0;
         int sayaçBinary=0;
-        int [] dizi={-34,68,798,-987,-789,6598,-6598,12354,9875612,-9875612};
+        int [] dizi={-34,68,798,-987,-789,6598,-6598,12354,9875612,-9875612,-12354};
         int temp;
         for (int i = 0; i < dizi.length; i++) {
             for (int j = 0; j < dizi.length; j++) {
