@@ -11,6 +11,8 @@ package Lab2_Hazırlık;
  */
 public class Toplamları_Sıfır_Olan_Dizi {
     public static void main(String[] args) {
+        int SayaçSıralama=0;
+        int sayaçBinary=0;
         int [] dizi={-34,68,798,-987,-789,6598,-6598,12354,9875612,-9875612};
         int temp;
         for (int i = 0; i < dizi.length; i++) {
@@ -19,6 +21,7 @@ public class Toplamları_Sıfır_Olan_Dizi {
                     temp=dizi[i];
                     dizi[i]=dizi[j];
                     dizi[j]=temp;
+                    SayaçSıralama++;
                 }
             }
         }
@@ -34,6 +37,7 @@ public class Toplamları_Sıfır_Olan_Dizi {
         while(dizi[sayac]<0){
             search=dizi[sayac]*(-1);
             while(first<= last){
+                sayaçBinary++;
              if(dizi[middle]<search){
                  first = middle + 1;
              }
@@ -52,5 +56,8 @@ public class Toplamları_Sıfır_Olan_Dizi {
             sayac++;
             first=sayac;
         }
+        
+        System.out.println("Sıralama adımları: "+SayaçSıralama);
+        System.out.println("Binary Adımları: "+sayaçBinary);
     }
 }
