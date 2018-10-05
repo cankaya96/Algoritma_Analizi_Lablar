@@ -19,46 +19,15 @@ TwoSum ts=new TwoSum();
     } */
 
     // return number of distinct pairs (i, j) such that a[i] + a[j] = 0
- public void quickSort(int A[],int pivot, int r)
-{
-    sayacSort++;
-    int q;
-    if(pivot<r)
-    {
-        q=partition(A,pivot, r);
-        quickSort(A,pivot, q-1);
-        quickSort(A,q+1, r);
-    }
-}
+
  private static boolean containsDuplicates(int[] a) {
         for (int i = 1; i < a.length; i++)
             if (a[i] == a[i-1]) return true;
         return false;
     }
-     public static int partition(int A[],int pivot, int r){
-    int tmp;
-    int x = A[r];
-    int i = pivot-1;
-
-    for(int j=pivot; j<=r-1; j++)
-    {
-        if(A[j]<=x)
-        {
-            i++;
-            tmp=A[i];
-            A[i]=A[j];
-            A[j]=tmp;
-        }
-    }
-    tmp=A[i+1];
-    A[i+1]=A[r];
-    A[r]=tmp;
-    return i+1;
-}
+  
     public static int count(int[] dizi) {
-        
-        
-        containsDuplicates(dizi);
+     
 int first=0;
         int sayac=0;
         int search;
@@ -85,7 +54,7 @@ int first=0;
             sayac++;
             first=sayac;
         }
-        partition(dizi,0,dizi.length-1);
+        
         
         return sayacSort;
     } 

@@ -5,6 +5,8 @@
  */
 package Lab2_Hazırlık;
 
+import java.util.Arrays;
+
 /**
  *
  * @author M. Furkan Çankaya
@@ -16,8 +18,8 @@ public class cozum2 {
         cozum2 c = new cozum2();
         
         int [] dizi={-34,68,798,-987,-789,6598,-6598,12354,9875612,-9875612,-12354};
-        c.quickSort(dizi, 0, dizi.length-1);
-        
+        //c.quickSort(dizi, 0, dizi.length-1);
+        Arrays.sort(dizi);
         for (int i = 0; i < dizi.length; i++) {
             System.out.print(dizi[i]+"  ");
         }
