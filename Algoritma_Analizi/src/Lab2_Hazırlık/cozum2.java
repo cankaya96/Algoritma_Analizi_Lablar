@@ -10,9 +10,13 @@ package Lab2_Hazırlık;
  * @author M. Furkan Çankaya
  */
 public class cozum2 {
+    int sayacSort = 0;
+    
     public static void main(String[] args) {
+        cozum2 c = new cozum2();
+        
         int [] dizi={-34,68,798,-987,-789,6598,-6598,12354,9875612,-9875612,-12354};
-        quickSort(dizi, 0, dizi.length-1);
+        c.quickSort(dizi, 0, dizi.length-1);
         
         for (int i = 0; i < dizi.length; i++) {
             System.out.print(dizi[i]+"  ");
@@ -44,10 +48,13 @@ public class cozum2 {
             sayac++;
             first=sayac;
         }
+        System.out.println("");
+        System.out.println("sıralama sayacı: "+c.sayacSort);
     }
     
-     public static void quickSort(int A[],int pivot, int r)
+     public void quickSort(int A[],int pivot, int r)
 {
+    this.sayacSort++;
     int q;
     if(pivot<r)
     {
@@ -56,7 +63,7 @@ public class cozum2 {
         quickSort(A,q+1, r);
     }
 }
-     public static int partition(int A[],int pivot, int r){
+     public int partition(int A[],int pivot, int r){
     int tmp;
     int x = A[r];
     int i = pivot-1;
