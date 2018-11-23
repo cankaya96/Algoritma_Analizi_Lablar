@@ -288,7 +288,10 @@ public class BST<Key extends Comparable<Key>, Value> {
     // (if min or max is null, treat as empty constraint)
     private boolean isBST(Node x, Key min, Key max) {
     	// your code here:
-    	return false;
+        if(x==null) return true;
+        if(min != null && x.key.compareTo(min)<=0) return false;
+        if(max != null && x.key.compareTo(max)>=0) return false;
+    	return isBST(x.left, min, x.key) && isBST(x.right, x.key,max);
     	
     	
     	
